@@ -1,0 +1,56 @@
+/* 
+    cores HEX: #765EFF
+*/
+.navbar-brand {
+    font-weight: 500;
+    font-size: 24px;
+    color: #765EFF;
+    &:hover {
+        color: #9886ff;
+    }
+}
+
+
+
+.btn {
+    background-color: #765EFF;
+    color: #f3f5f6;
+    text-decoration: none;
+    transition: 0.3s background-color;
+    &:hover {
+        background-color: #9886ff;
+    color: #f3f5f6;
+    }
+}
+
+
+.nav-link {
+    color: grey;
+    font-weight: 500;
+    position: relative;
+    &:hover {
+        color: #000;
+    }
+}
+
+
+@media (min-width: 991px) {
+
+    .nav-link::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0%;
+        height: 2px;
+        background-color: #765EFF;
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+    }
+
+    .nav-link:hover::before {
+        width: 90%;
+        visibility: visible;
+    }
+}
